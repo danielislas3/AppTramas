@@ -1,0 +1,21 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+    <string name="app_name">Tramas</string>
+    <string name="txt_titulo">Selecciona el tipo de trama</string>
+    <string name="btn_bsc">BSC</string>
+    <string name="btn_hdlc">HDLC</string>
+    <string name="btn_ppp">PPP</string>
+    <string name="btn_eth">ETHERNET</string>
+
+    <string name="ingresa_campos">Ingresa los siguientes campos: </string>
+    <string name="btn_trama">Grenerar trama</string>
+    <string name="btn_regresar">Regresar</string>
+    <string name="resultado">Resultado</string>
+    <string name="nombre1">José Daniel Orio Islas</string>
+    <string name="nombre2">Lopez Rubio Guillermo</string>
+    <string name="nombre3">Manjarrez Palacios Juan Manuel</string>
+    <string name="escuela1">Centro Universitario</string>
+    <string name="escuela2">UAEM Zumpango</string>
+    <string name="carreta">Ingenieria en Computacion</string>
+    <string name="tituloApp">Tramas HDLC y BSC</string>
+
+</resources>

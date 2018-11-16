@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ETH">
+
+    <TextView
+        android:id="@+id/ingresa_campos"
+        android:layout_width="363dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ingresa_campos"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="108dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txt_direccionDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="#0123456789ABCDEF"
+            android:ems="10"
+            android:hint="DIRECCION DESTINO"
+            android:inputType="textPersonName"
+            android:maxLength="12" />
+
+        <EditText
+            android:id="@+id/txt_direccionFuente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="#0123456789ABCDEF"
+            android:ems="10"
+            android:hint="DIRECCION FUENTE"
+            android:inputType="textPersonName"
+            android:maxLength="12" />
+
+        <TextView
+            android:id="@+id/textView_longitud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Longitud"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txt_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="DATOS LLC"
+            android:maxLength="1518"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txt_crc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="01"
+            android:ems="10"
+            android:hint="CRC"
+            android:inputType="number"
+            android:maxLength="16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="331dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/generar_eth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enviarETH"
+            android:text="@string/btn_trama" />
+
+        <Button
+            android:id="@+id/regresar_trama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Menu"
+            android:text="@string/btn_regresar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="336dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <TextView
+            android:id="@+id/resultado_eth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/resultado"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/resultado_eth2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:text="Resultado2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+
+</android.support.constraint.ConstraintLayout>

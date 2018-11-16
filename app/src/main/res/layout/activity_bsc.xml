@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BSC">
+
+    <TextView
+        android:id="@+id/ingresa_campos"
+        android:layout_width="363dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ingresa_campos"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="108dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="SYNC"
+            android:inputType="number"
+            android:digits="01"/>
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_soh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="SOH"
+            android:inputType="number"
+            android:digits="01"/>
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_cabecera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CABECERA"
+            android:inputType="number"
+            android:digits="01"/>
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_stx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="STX"
+            android:inputType="number"
+            android:digits="01"/>
+
+        <EditText
+            android:id="@+id/txt_textoBsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="TEXTO"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_etx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="ETX"
+            android:inputType="number"
+            android:digits="01"/>
+
+        <EditText
+            android:id="@+id/txt_crc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CRC"
+            android:inputType="number"
+            android:digits="01"
+            android:maxLength="16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="326dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado_bsc">
+
+        <Button
+            android:id="@+id/generar_bsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enviarBSC2"
+            android:text="@string/btn_trama" />
+
+        <Button
+            android:id="@+id/regresar_trama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Menu"
+            android:text="@string/btn_regresar" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultado_bsc"
+        android:layout_width="297dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/resultado"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</android.support.constraint.ConstraintLayout>

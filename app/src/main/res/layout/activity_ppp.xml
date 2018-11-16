@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PPP">
+
+    <TextView
+        android:id="@+id/ppp"
+        android:layout_width="296dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/resultado"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/ingresa_campos2"
+        android:layout_width="363dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ingresa_campos"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="460dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/generar_bsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enviarPPP"
+            android:text="@string/btn_trama" />
+
+        <Button
+            android:id="@+id/regresar_trama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Menu"
+            android:text="@string/btn_regresar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="335dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresa_campos2">
+
+        <EditText
+            android:id="@+id/txt_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="01"
+            android:ems="10"
+            android:hint="DIRECCION"
+            android:inputType="number"
+            android:maxLength="8" />
+
+
+        <EditText
+            android:id="@+id/txt_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="01"
+            android:ems="10"
+            android:hint="CONTROL"
+            android:inputType="number"
+            android:maxLength="8" />
+
+
+        <Spinner
+            android:id="@+id/protocolo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+
+        <EditText
+            android:id="@+id/txt_textoPpp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="TEXTO"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/txt_crc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="01"
+            android:ems="10"
+            android:hint="CRC"
+            android:inputType="numberDecimal"
+            android:maxLength="16" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

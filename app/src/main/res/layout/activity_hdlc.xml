@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HDLC">
+
+    <TextView
+        android:id="@+id/resultado_hdlc"
+        android:layout_width="296dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/resultado"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/ingresa_campos2"
+        android:layout_width="363dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/ingresa_campos"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="326dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado_hdlc">
+
+        <Button
+            android:id="@+id/generar_bsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="enviarHDLC"
+            android:text="@string/btn_trama" />
+
+        <Button
+            android:id="@+id/regresar_trama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Menu"
+            android:text="@string/btn_regresar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="326dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingresa_campos2">
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="DIRECCION"
+            android:inputType="number"
+            android:digits="01"
+        />
+
+
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/txt_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CONTROL"
+            android:inputType="number"
+             android:digits="01"/>
+
+
+        <EditText
+            android:id="@+id/txt_textoHdlc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="TEXTO"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:maxLength="16"
+            android:id="@+id/txt_crc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="CRC"
+            android:inputType="numberDecimal"
+             android:digits="01"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
