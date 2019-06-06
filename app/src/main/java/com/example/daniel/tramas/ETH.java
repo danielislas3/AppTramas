@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
+
 public class ETH extends AppCompatActivity {
     private EditText et1,et2,et3,et4;
     private TextView tv2,tv3,tv4;
@@ -85,13 +86,13 @@ public class ETH extends AppCompatActivity {
             }
             //concateno el arreglo de basura al string auxiliar
             datos_string3=Arrays.toString(datos_array);
-            datos_string3=datos_string3.replace(",","");
-            datos_string3=datos_string3.replace("[","");
-            datos_string3=datos_string3.replace("]","");
+            datos_string3=datos_string3.replace(",","F");
+            datos_string3=datos_string3.replace("[","F");
+            datos_string3=datos_string3.replace("]","F");
             relleno_string=datos_string3;
 
 
-        } else  relleno_string=datos_string;
+        } //else  relleno_string=datos_string;
 
 
 

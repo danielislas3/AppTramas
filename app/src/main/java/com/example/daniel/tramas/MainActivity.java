@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(ethSalto);
 
     }
+    public void SaltoWifi(View view){
+        Intent wifiSalto=new Intent(this, WIFI.class);
+        startActivity(wifiSalto);
+
+    }
 
 
 
